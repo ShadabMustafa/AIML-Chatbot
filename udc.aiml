@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    
+    <!-- Bot Starting sequence branch -->
+  <category>
+    <pattern>^</pattern>
+    <template>
+     Are you a Computer Science Major? I can offer you advice!
+
+    <button>
+        <text>Yes</text>
+        <postback>Oui</postback>
+    </button>
+    
+    <button>
+        <text>No</text>
+        <postback>Non</postback>
+    </button>
+    
+    </template>
+  </category>
+  
+    <!-- Bot Forced End sequence branch -->
+   <category>
+    <pattern>Non</pattern>
+    <template>Leave, I can't help you any further!</template>
+  </category>
+  
+  
+  
+      <!-- Bot Main sequence branch -->
+   <category>
+    <pattern>Oui</pattern>
+   
+    <template>   Good, then I can help you
+
+  <carousel>
+      
+      
+      <card>
+          <image>https://www.datocms-assets.com/14946/1590690690-front-end.jpg</image>
+          <title>Do you like websites and visuals?</title>
+          <subtitle>If so click this option otherwise move on.</subtitle>
+          <button>
+              <text>Yes I love Websites and Visual Design</text>
+              <postback>Front End</postback>
+          </button>
+      </card>
+      
+      <card>
+          <image>https://ddi-dev.com/uploads/backend-is.png</image>
+          <title>Do you like servers,databases?</title>
+          <subtitle>If so click this option otherwise move on.</subtitle>
+          <button>
+              <text>Yes I love Servers and Databases</text>
+              <postback>Back End</postback>
+          </button>
+      </card>
+      
+      <card>
+          <image>https://www.codingdojo.com/blog/wp-content/uploads/FULL-STACK-DEV-GRAPH-2.jpg</image>
+          <title>Do you like websites,servers,everything?</title>
+          <subtitle>If so click this option otherwise move on.</subtitle>
+          <button>
+              <text>Yes I love many computer specialty fields.</text>
+              <postback>Full Stack</postback>
+          </button>
+      </card>
+      
+      <card>
+          <image>http://pulatech.com/wp-content/uploads/2015/11/mob-app-11-2.png</image>
+          <title>Do you like cellphones?</title>
+          <subtitle>If so click this option otherwise move on.</subtitle>
+          <button>
+              <text>Yes I love cellphones!</text>
+              <postback>Mobile Application Development</postback>
+          </button>
+      </card>
+      
+      <card>
+          <image>https://www.veritis.com/wp-content/uploads/2019/05/devsecops-devops-cybersecurity-combine.jpg</image>
+          <title>Do you like hacking,cybersecurity?</title>
+          <subtitle>If so click this option otherwise move on.</subtitle>
+          <button>
+              <text>Yes I love Hacking and Cybersecurity</text>
+              <postback>Cybersecurity Engineer</postback>
+          </button>
+      </card>
+      
+      <card>
+          <image>https://showmeinstitute.org/wp-content/uploads/2019/10/shutterstock_1083474668-812x491.jpg</image>
+          <title>You don't know what you like, your confused?</title>
+          <subtitle>If so click this option otherwise move on.</subtitle>
+          <button>
+              <text>I don't know what I like.</text>
+              <postback>Non</postback>
+          </button>
+      </card>
+      
+      
+  </carousel>
+ 
+  </template>
+  </category>
+  
+  <!-- Bot Front End sequence branch -->
+  <category>
+    <pattern>Front End</pattern>
+    <template>If you love websites then it seems Front End Development is the path for you.
+    Basically, Front End Developers basically work on the visual and interactive elements of a website.
+    
+    <button>
+        <text>I am interested in more detail!</text>
+        <url>https://careerkarma.com/blog/what-is-a-front-end-developer/#:~:text=Front%2Dend%20development%20is%20used,JavaScript%20to%20design%20web%20pages</url>
+    </button>
+
+<button>
+    <text>Not interested or Done with everything!</text>
+    <postback>Non</postback>
+</button>
+
+    </template>
+  </category>
+  
+    <!-- Bot Back End sequence branch -->
+    <category>
+    <pattern>Back End</pattern>
+    <template>If you love servers then it seems Back End Development is the path for you.
+    Basically, Back End Developers basically work on the servers and databases stuff.
+    
+    <button>
+        <text>I am interested in more detail!</text>
+        <url>https://careerkarma.com/blog/what-is-back-end-development/</url>
+    </button>
+
+<button>
+    <text>Not interested or Done with everything!</text>
+    <postback>Non</postback>
+</button>
+
+    </template>
+  </category>
+  
+  
+   <!-- Bot Full Stack End sequence branch -->
+    <category>
+    <pattern>Full Stack</pattern>
+    <template>If you love many computer specialties, Full Stack Development is the path for you.
+    Basically, Full Developers basically work on almost everything regarding computers.
+    
+    <button>
+        <text>I am interested in more detail!</text>
+        <url>https://careerkarma.com/blog/full-stack-developer/</url>
+    </button>
+
+<button>
+    <text>Not interested or Done with everything!</text>
+    <postback>Non</postback>
+</button>
+
+    </template>
+  </category>
+  
+  
+   <!-- Bot Mobile Application Development End sequence branch -->
+    <category>
+    <pattern>Mobile Application Development</pattern>
+    <template>If you love Cellphones, Mobile Application Development is the path for you.
+    Basically, Mobile App Devs basically work on almost everything regarding cellphones.
+    
+    <button>
+        <text>I am interested in more detail!</text>
+        <url>https://careerkarma.com/careers/mobile-development/</url>
+    </button>
+
+<button>
+    <text>Not interested or Done with everything!</text>
+    <postback>Non</postback>
+</button>
+
+    </template>
+  </category>
+  
+  
+  <!-- Bot Cybersecurity Engineer End sequence branch -->
+    <category>
+    <pattern>Cybersecurity Engineer</pattern>
+    <template>If you love Cybersecurity and Hacking, then becoming a Cybersecurity Engineer is the path for you.
+    Basically, Cybersecurity Engineer basically work on almost everything regarding security of digital devices.
+    
+    <button>
+        <text>I am interested in more detail!</text>
+        <url>https://careerkarma.com/careers/cybersecurity//</url>
+    </button>
+
+<button>
+    <text>Not interested or Done with everything!</text>
+    <postback>Non</postback>
+</button>
+
+    </template>
+  </category>
+    <!--  Finally DONE! -->
+</aiml>
